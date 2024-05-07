@@ -46,6 +46,14 @@
                 <div class='authinfo'>
                     {{ Auth::user()->name }}
                 </div>
+                <div>
+                    @foreach($questions as $question)
+                        <a href="https://teratail.com/questions/{{ $question['id'] }}">
+                            {{ $question['title'] }}
+                            <br>
+                        </a>
+                    @endforeach
+                </div>
             </body>
     </x-app-layout>
 </html>
